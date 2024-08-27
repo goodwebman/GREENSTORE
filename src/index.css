@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'CeraProMed';
+	src: local('CeraPro'), url('./fonts/CeraPro-Medium.ttf') format('truetype');
+
+	font-weight: 'normal';
+}
+
+@font-face {
+	font-family: 'CeraProBold';
+	src: local('CeraPro'), url('./fonts/CeraPro-Black.ttf') format('truetype');
+
+	font-weight: 'normal';
+}
+
+@font-face {
+	font-family: 'CeraProLight';
+	src: local('CeraPro'), url('./fonts/CeraPro-Regular.ttf') format('truetype');
+
+	font-weight: 'normal';
+}
+
+* {
+	font-family: 'CeraProMed' !important;
+}
+
+.bold-font {
+	font-family: 'CeraProBold' !important;
+}
+
+.light-font {
+	font-family: 'CeraProLight' !important;
+}
+
+.price_range {
+	width: 80%;
+	height: 6px;
+	
+}
+
+.slider-track {
+	background-color: #46a358;
+	height: 6px;
+	border-radius: 20px;
+}
+
+.slider-range {
+	background-color: #46a358;
+}
+
+/* Активная часть трека (в диапазоне) */
+
+/* Ползунки */
+.slider-thumb {
+	cursor: grab;
+	background-color: #46a358;
+	width: 25px;
+	height: 25px;
+	border-radius: 15px;
+	border: 3px solid white;
+	top: -9px;
+	outline: none;
+}
