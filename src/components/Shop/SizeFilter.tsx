@@ -1,30 +1,40 @@
 import { Sizes } from '@/shared/types'
 import SizeItem from './SizeItem'
 import Title from './Title'
-
-type SizeProps = {
-	selectedSize: Sizes
-	setSelectedSize: (value: Sizes) => void
-
-	size: string
-	count: number
-}
+import { useState } from 'react'
 
 
-function SizeFilter({selectedSize, setSelectedSize, size, count} : SizeProps) {
+function SizeFilter({selectedSize, setSelectedSize}) {
+
+	
 	return (
 		<section
 			id='shop'
-			className='bg-[#FBFBFB] max-w-[370px] px-[14px] py-[14px]'
+			className='bg-[#FBFBFB] max-w-[370px] px-[14px] py-[14px] pt-[36px]'
 		>
 			{/* sidebar */}
 			<aside>
 				<Title title='Size' />
 
 				<div className='px-[15px] pt-[20px]'>
-					<SizeItem size={'Medium'} count={count} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>
-					<SizeItem size={'Medium'} count={count} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>
-					<SizeItem size={'Medium'} count={count} selectedSize={selectedSize} setSelectedSize={setSelectedSize}/>
+					<SizeItem
+						size='Small'
+						count={119}
+						selectedSize={selectedSize}
+						setSelectedSize={setSelectedSize}
+					/>
+					<SizeItem
+						size='Medium'
+						count={86}
+						selectedSize={selectedSize}
+						setSelectedSize={setSelectedSize}
+					/>
+					<SizeItem
+					size='Large'
+					count={78}
+						selectedSize={selectedSize}
+						setSelectedSize={setSelectedSize}
+					/>
 				</div>
 			</aside>
 		</section>

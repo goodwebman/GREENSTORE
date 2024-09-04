@@ -2,12 +2,13 @@ import { SelectedPage } from '@/shared/types'
 import { useState } from 'react'
 import Link from './Link'
 
-type NavigationProps = {
-	selectedPage: SelectedPage
-	setSelectedPage: (value: SelectedPage) => void
-}
 
-const Navigation = ({ selectedPage, setSelectedPage }: NavigationProps) => {
+
+const Navigation = () => {
+	const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+		SelectedPage.Home
+	)
+
 	const [searchStatus, setSearchStatus] = useState<boolean>(false)
 	return (
 		<div>

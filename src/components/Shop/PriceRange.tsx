@@ -1,10 +1,9 @@
-import { useState } from 'react'
 import ReactSlider from 'react-slider'
 import styled from 'styled-components'
 import Title from './Title'
 
 const MIN = 39
-const MAX = 1500
+const MAX = 400
 
 const StyledSlider = styled(ReactSlider)`
 	width: 80%;
@@ -22,9 +21,7 @@ const StyledTrack = styled.div`
 `
 const Track = (props, state) => <StyledTrack {...props} index={state.index} />
 
-function PriceRange() {
-	const [values, setValues] = useState([MIN, 1230])
-
+function PriceRange({ values, setValues, priceClickFilter }) {
 	return (
 		<section
 			id='shop'
@@ -41,7 +38,6 @@ function PriceRange() {
 						max={MAX}
 						value={values}
 						onChange={setValues}
-						rangeClassName='slider-range'
 						trackClassName='slider-track'
 						thumbClassName='slider-thumb'
 						renderTrack={Track}
@@ -54,7 +50,10 @@ function PriceRange() {
 							${values[0]} - ${values[1]}
 						</span>{' '}
 					</div>
-					<button className='mt-[16px] text-[18px] px-[25px] py-[8px] bg-[#46A358] text-white rounded-[10px]'>
+					<button
+						className='mt-[16px] text-[18px] px-[25px] py-[8px] bg-[#46A358] text-white rounded-[10px]'
+						onClick={() => priceClickFilter()}
+					>
 						Filter
 					</button>
 				</div>

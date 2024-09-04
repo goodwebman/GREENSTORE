@@ -2,16 +2,12 @@ import { SelectedCategories } from '@/shared/types'
 import CategoriesItem from './CategoriesItem'
 import Title from './Title'
 
-type ShopProps = {
-	selectedCategories: SelectedCategories
-	setSelectedCategories: (value: SelectedCategories) => void
-}
 
-const Shop = ({ selectedCategories, setSelectedCategories }: ShopProps) => {
+const Shop = ({selectedCategories, setSelectedCategories}) => {
 	return (
 		<section
 			id='shop'
-			className='bg-[#FBFBFB] max-w-[370px] mt-[30px] px-[14px] py-[14px]'
+			className='bg-[#FBFBFB] max-w-[370px] min-w-[285px] mt-[30px] px-[14px] py-[14px]'
 		>
 			{/* sidebar */}
 			<aside>
@@ -39,13 +35,13 @@ const Shop = ({ selectedCategories, setSelectedCategories }: ShopProps) => {
 					<CategoriesItem
 						selectedCategories={selectedCategories}
 						setSelectedCategories={setSelectedCategories}
-						categories='SmallPlants'
+						categories='Small Plants'
 						count={39}
 					/>
 					<CategoriesItem
 						selectedCategories={selectedCategories}
 						setSelectedCategories={setSelectedCategories}
-						categories='BigPlants'
+						categories='Big Plants'
 						count={23}
 					/>
 
@@ -75,9 +71,6 @@ const Shop = ({ selectedCategories, setSelectedCategories }: ShopProps) => {
 					/>
 				</div>
 			</aside>
-
-			{/* shop section */}
-			<div></div>
 		</section>
 	)
 }

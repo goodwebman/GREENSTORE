@@ -1,35 +1,26 @@
 import Header from '@/components/Header/Header'
 import Navigation from '@/components/Navigation/Navigation'
 import '@/fonts/CeraPro-Black.ttf'
-import { SelectedCategories, SelectedPage, Sizes } from '@/shared/types'
-import { useState } from 'react'
 import PriceRange from './components/Shop/PriceRange'
-import Shop from './components/Shop/Shop'
+
 import SizeFilter from './components/Shop/SizeFilter'
+import SuperSale from './components/Shop/SuperSale'
+import TopbarFilter from './components/Shop/TopbarFilter'
+
+import LeftAside from './components/Shop/LeftAside'
+import SellSection from './components/Shop/SellSection'
+import Shop from './components/Shop/Shop'
+import ShopSection from './components/Shop/ShopSection'
 
 function App() {
-	const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-		SelectedPage.Home
-	)
-
-	const [selectedCategories, setSelectedCategories] =
-		useState<SelectedCategories>(SelectedCategories.HousePlants)
-
-	const [selectedSize, setSelectedSize] = useState<Sizes>()
-
 	return (
 		<div className='w-[90%] m-auto'>
-			<Navigation
-				selectedPage={selectedPage}
-				setSelectedPage={setSelectedPage}
-			/>
+			<Navigation />
 			<Header />
-			<Shop
-				selectedCategories={selectedCategories}
-				setSelectedCategories={setSelectedCategories}
-			/>
-			<PriceRange />
-			<SizeFilter />
+			{/* shop */}
+			<ShopSection >
+				
+			</ShopSection>
 		</div>
 	)
 }

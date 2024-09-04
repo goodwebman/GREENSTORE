@@ -20,5 +20,12 @@ export enum SelectedCategories {
 export enum Sizes {
     Small = 'small',
     Medium = 'medium',
-    Large = 'large'
+    Large = 'large',
+    default = 'default'
+}
+
+export enum TopFilter {
+    AllPlants = 'allplants',
+    NewArrivals = 'newarrivals',
+    Sale = 'sale'
 }

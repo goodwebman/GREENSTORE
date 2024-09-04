@@ -1,5 +1,5 @@
 import { SelectedCategories } from '@/shared/types'
-import { useEffect } from 'react'
+
 
 type CategoriesProps = {
 	categories: string
@@ -20,6 +20,7 @@ const CategoriesItem = ({
 
 	
 	return (
+		
 		<button
 			className={`${
 				selectedCategories === lowerCaseCategories ? 'text-[#46A358]' : ''
@@ -30,7 +31,10 @@ const CategoriesItem = ({
 			
 			<div>{categories}</div>
 			<div>({count})</div>
+
+			
 		</button>
+		
 
 		
 	)
