@@ -1,10 +1,9 @@
+import { data } from '@/Data/PlantsData'
 import { SelectedCategories, Sizes, TopFilter } from '@/shared/types'
 import { useState } from 'react'
+import CurrentPages from './CurrentPages'
 import LeftAside from './LeftAside'
-import SellSection from './SellSection'
 import TopbarFilter from './TopbarFilter'
-import CurrentPages from './currentPages'
-import { data } from '@/Data/PlantsData'
 
 const ShopSection = () => {
 	const [selectedCategories, setSelectedCategories] =
@@ -42,15 +41,15 @@ const ShopSection = () => {
 				/>
 
 				{/* sell section */}
-				<SellSection
+
+				<CurrentPages
 					selectedCategories={selectedCategories}
 					selectedSize={selectedSize}
 					selectedTopBar={selectedTopBar}
 					data={data}
 					filterPrice={filterPrice}
+					products={data}
 				/>
-
-				<CurrentPages />
 			</div>
 		</section>
 	)
